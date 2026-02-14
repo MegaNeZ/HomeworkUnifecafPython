@@ -35,10 +35,9 @@ class OrcamentoImobiliaria:
         return valor_base
 
     def gerar_csv(self, valor_mensal):
-        # Defini o nome fixo aqui: orcamento_final.csv
         nome_arquivo = 'orcamento_final.csv'
         with open(nome_arquivo, mode='w', newline='') as ficheiro:
-            writer = csv.writer(ficheiro, delimiter=';') # Mudei para ; para abrir fácil no Excel
+            writer = csv.writer(ficheiro, delimiter=';')
             writer.writerow(['Parcela', 'Valor Aluguel', 'Parcela Contrato', 'Total Mensal'])
             
             for i in range(1, 13):
